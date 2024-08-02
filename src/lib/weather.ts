@@ -14,7 +14,7 @@ export const fetchWeather = async (city: string): Promise<WeatherData | WeatherE
 
     const data = await response.json();
     return data;
-  } catch (error) {
+  } catch (error: any) {
     return { error: error.message };
   }
 };
